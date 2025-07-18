@@ -2959,13 +2959,21 @@
       <div id="ai-chat-widget-header">
         <div><img src="https://raw.githubusercontent.com/smiltiszilinkas/gpswox/main/logo_long.svg" alt="logo_long" />
         </div>
-        <div id="ai-chat-language-selector">
-          <label for="ai-chat-language" style="font-size: 12px;">🌐</label>
-          <select id="ai-chat-language">
-            <option value="en" selected>English</option>
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
-          </select>
+        <div class="custom-select" onclick="toggleOptions()">
+          <div class="selected-option" id="selectedLang">
+            <img src="https://flagsapi.com/GB/flat/16.png">" alt="English"> En
+          </div>
+          <div class="options" id="languageOptions">
+            <div class="option-item" onclick="selectLang('en', 'https://flagsapi.com/GB/flat/16.png', 'EN')">
+              <img src="https://flagsapi.com/GB/flat/16.png" alt="English"> EN
+            </div>
+            <div class="option-item" onclick="selectLang('es', 'https://flagsapi.com/ES/flat/16.png', 'ES')">
+              <img src="https://flagsapi.com/ES/flat/16.png" alt="Español"> ES
+            </div>
+            <div class="option-item" onclick="selectLang('pt', 'https://flagsapi.com/PT/flat/16.png', 'PT')">
+              <img src="https://flagsapi.com/PT/flat/16.png" alt="Português"> PT
+            </div>
+          </div>
         </div>
         <div> <button id="ai-chat-bot-chat-reset" onclick="resetChat()"><img
               src="https://raw.githubusercontent.com/smiltiszilinkas/gpswox/main/reload.svg" alt="reload" />
