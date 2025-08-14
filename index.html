@@ -3003,7 +3003,7 @@
         var cookie = 0;
         var expireDays = 1;
         var now = new Date().getTime();
-        var expireDate = now + (1001 * 60 * 60 * 24 * expireDays);
+        var expireDate = now + (1000 * 60 * 60 * 24 * expireDays);
 
         if ($.cookie("consultpopup"))
           cookie = $.cookie("consultpopup");
